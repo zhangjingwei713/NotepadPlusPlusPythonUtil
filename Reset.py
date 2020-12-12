@@ -1,14 +1,11 @@
 def Reset():
     currentId = notepad.getCurrentBufferID()
     currentFilename = notepad.getCurrentFilename()
-    print(currentId)
     allFiles = notepad.getFiles()
     
     for file in allFiles:
         filename = file[0]
         fileId = file[1]
-        print(filename)
-        print(fileId)
         
         notepad.activateBufferID(fileId)
         
@@ -31,6 +28,20 @@ def Reset():
     notepad.new()
     notepad.menuCommand(MENUCOMMAND.VIEW_GOTO_ANOTHER_VIEW)
     editor.addText(currentFilename)
+    editor.addText('\n')
+    editor.addText('$Content$\n')
+    editor.addText('[ClientManager] Connected loginToken:\n')
+    editor.addText('[ClientManager] client disconnected, loginToken:\n')
+    editor.addText('GameLiftClientAgent.ConnectRoomWithPlayerSession: Connect to\n')
+    editor.addText('[ServerManager] client connected, loginToken:\n')
+    editor.addText('[ServerManager] client disconnected, loginToken:\n')
+    editor.addText('[GameStateManager]\n')
+    editor.addText('ActiveSceneChanged, oriScene:\n')
+    editor.addText('$RegexContent$\n')
+    editor.addText('\[Error\]|\[Exception\]\n')
+    editor.addText('$StartFrame$\n')
+    editor.addText('$EndFrame$\n')
+    editor.addText('$End$\n')
     
     notepad.activateBufferID(currentId)
     

@@ -2,14 +2,11 @@ def GotoLine():
     currentView = notepad.getCurrentView()
     currentLine = editor.getCurLine()
     
-    print(currentLine)
-    
     if currentView == 1:
         otherView = 0
     else:
         otherView = 1
     
-    print(otherView)
     index = notepad.getCurrentDocIndex(otherView)
     notepad.activateIndex(otherView, index)
     

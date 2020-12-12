@@ -11,9 +11,6 @@ def FindError():
             
             if '[Error]' in lineContent:
                 allError.append(lineContent)
-            # match = re.search('\d\d-\d\d \d\d:\d\d:\d\d:\d\d\d', lineContent)
-            # if match:
-            #     allError.append(lineContent)
 
         notepad.new()
         notepad.menuCommand(MENUCOMMAND.VIEW_GOTO_ANOTHER_VIEW)
