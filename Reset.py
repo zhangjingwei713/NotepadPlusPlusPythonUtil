@@ -1,4 +1,8 @@
 def Reset():
+    currentView = notepad.getCurrentView()
+    if currentView == 1:
+        notepad.menuCommand(MENUCOMMAND.VIEW_GOTO_ANOTHER_VIEW)
+        
     currentId = notepad.getCurrentBufferID()
     currentFilename = notepad.getCurrentFilename()
     allFiles = notepad.getFiles()
