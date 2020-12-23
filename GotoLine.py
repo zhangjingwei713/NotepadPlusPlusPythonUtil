@@ -11,11 +11,11 @@ def GotoLine():
     notepad.activateIndex(otherView, index)
     
     lineCount = editor.getLineCount()
-        
-    for lineIndex in range(lineCount):
+    
+    for lineIndex in range(lineCount - 1):
         lineContent = editor.getLine(lineIndex)
             
-        if currentLine == lineContent:                
+        if currentLine in lineContent:
             editor.gotoLine(lineIndex)
             
             desLineIndex = 0
