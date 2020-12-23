@@ -9,7 +9,7 @@ def FindError():
         for lineIndex in range(lineCount):
             lineContent = editor.getLine(lineIndex)
             
-            if '[Error]' in lineContent:
+            if '[Error]' in lineContent or '[Exception]' in lineContent:
                 allError.append(lineContent)
 
         notepad.new()
